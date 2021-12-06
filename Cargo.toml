@@ -4,3 +4,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+rayon = "^1.5"
+
+[profile.perf]
+inherits = "release"
+lto = true
+codegen-units = 1
+opt-level = 3
+overflow-checks = false
